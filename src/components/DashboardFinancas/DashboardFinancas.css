@@ -47,13 +47,34 @@
 
 .grafico-item {
   flex: 1;
-  min-width: 250px;
-  max-width: 380px;
+  min-width: 280px;
   text-align: center;
+}
+
+.grafico-canvas {
+  position: relative;
+  height: 280px;
+  width: 100%;
 }
 
 .grafico-item h3 {
   font-size: 1rem;
   margin-bottom: 10px;
   color: var(--text-secondary);
+}
+
+@media (min-width: 1200px) {
+  .graficos {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .resumo-item strong {
+    font-size: 1.1rem;
+  }
+
+  .grafico-item {
+    min-width: 100%;
+  }
 }

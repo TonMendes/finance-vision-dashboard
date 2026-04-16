@@ -1,6 +1,6 @@
 .transaction-card {
   background-color: var(--card-bg);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 15px 20px;
   display: grid;
   grid-template-columns: 1fr 120px 140px 40px;
@@ -10,7 +10,6 @@
   box-shadow: none;
   border: none;
   border-bottom: 1px solid var(--border-color);
-  border-radius: 0;
 }
 
 .transaction-card span {
@@ -18,7 +17,7 @@
 }
 
 .transaction-card .categoria {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
 }
 
@@ -34,4 +33,31 @@
 
 .delete-btn:hover {
   color: #b71c1c;
+}
+
+@media (max-width: 768px) {
+  .transaction-card {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 4px 10px;
+    padding: 12px 16px;
+  }
+
+  .transaction-card .categoria {
+    grid-column: 1;
+    font-size: 0.78rem;
+  }
+
+  .transaction-card .valor {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    text-align: right;
+  }
+
+  .delete-btn {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
 }

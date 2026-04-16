@@ -62,15 +62,16 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .filtros {
   display: flex;
   gap: 10px;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .filtros button {
@@ -108,4 +109,14 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
   border-bottom: 2px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .lista-header {
+    display: none;
+  }
 }

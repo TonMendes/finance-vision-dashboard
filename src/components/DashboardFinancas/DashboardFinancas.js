@@ -81,12 +81,16 @@ function DashboardFinancas({ saldo, transacoes }) {
         {labelsGrafico.length > 0 && (
           <div className="grafico-item">
             <h3>Despesas por Categoria</h3>
-            <Doughnut data={dataRosca} />
+            <div className="grafico-canvas">
+              <Doughnut data={dataRosca} options={{ maintainAspectRatio: false }} />
+            </div>
           </div>
         )}
         <div className="grafico-item">
           <h3>Entradas vs Saídas</h3>
-          <Bar data={dataBarras} />
+          <div className="grafico-canvas">
+            <Bar data={dataBarras} options={{ maintainAspectRatio: false }} />
+          </div>
         </div>
       </div>
     </div>
