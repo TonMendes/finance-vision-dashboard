@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.toggleBtn {
+  background: transparent;
+  border: 1px solid #ffffff55;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.toggleBtn:hover {
+  background-color: rgba(255,255,255,0.15);
+}

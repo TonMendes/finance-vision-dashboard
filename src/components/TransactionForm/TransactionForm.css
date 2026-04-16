@@ -1,0 +1,51 @@
+.transaction-form {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.transaction-form input,
+.transaction-form select {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.transaction-form input::placeholder {
+  color: var(--text-secondary);
+}
+
+.transaction-form select option {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+}
+
+.transaction-form button {
+  background-color: #3f51b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.transaction-form button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.transaction-form button:disabled {
+  background-color: #555555;
+  cursor: not-allowed;
+}

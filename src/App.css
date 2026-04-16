@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #3f51b5;
+  --bg-color: #282c34;
+  --text-white: #ffffff;
+  --text-dark: #333333;
+  --entrada-color: #2ecc71;
+  --saida-color: #e74c3c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+.dark {
+  --bg-primary: #282c34;
+  --bg-secondary: #1e2128;
+  --bg-input: #282c34;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --border-color: #444444;
+  --card-bg: #2a2f3a;
+  --header-bg: #1e2128;
+  --resumo-entradas-bg: #1a3a2a;
+  --resumo-saidas-bg: #3a1a1a;
+  --resumo-saldo-bg: #1a2a3a;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
+}
+
+.light {
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #ffffff;
+  --bg-input: #ffffff;
+  --text-primary: #222222;
+  --text-secondary: #666666;
+  --border-color: #dddddd;
+  --card-bg: #ffffff;
+  --header-bg: #3f51b5;
+  --resumo-entradas-bg: #d4f5e2;
+  --resumo-saidas-bg: #fde8e8;
+  --resumo-saldo-bg: #ddeeff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filtros button {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.filtros button:hover {
+  opacity: 0.85;
+}
+
+.lista-transacoes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.lista-header {
+  display: grid;
+  grid-template-columns: 1fr 120px 140px 40px;
+  gap: 10px;
+  padding: 15px 20px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
 }
